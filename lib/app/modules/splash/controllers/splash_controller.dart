@@ -9,7 +9,7 @@ class SplashController extends GetxController {
   void onInit() {
     print('SPLASH CONTROLLEr');
     Future.delayed(Duration(seconds: 2), () {
-      Get.offAndToNamed(Routes.SIGNIN, parameters: {'id': 'nani'});
+      Get.offAndToNamed(Routes.HOME, parameters: {'id': 'nani'});
     });
     super.onInit();
   }
