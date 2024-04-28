@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:maya_maya_architecture/app/routes/app_pages.dart';
 import 'package:maya_maya_architecture/base/config/env.dart';
+import 'package:maya_maya_architecture/base/widgets/unknown_route_page.dart';
 
 class MayaMayaApp extends StatefulWidget {
   final EnvVars env;
@@ -27,6 +28,10 @@ class _AppState extends State<MayaMayaApp> {
       debugShowCheckedModeBanner: false,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      unknownRoute: GetPage(
+        name: '/notFound',
+        page: () => const UnknownRoutePage(),
+      ),
     );
   }
 }
