@@ -20,7 +20,7 @@ class SplashView extends GetView<SplashController> {
             Get.offAllNamed(Routes.HOME);
           },
           child: Text(
-            'SplashView is working',
+            'SplashView is working init commet test',
             style: TextStyle(fontSize: 20),
           ),
         ),
