@@ -6,14 +6,14 @@ const int SMALL_SCREEN_SIZE = 360;
 const int CUSTOM_SCREEN_SIZE = 1100;
 
 class ResponsiveUtils {
-  static bool isSmallScreen() {
-    return Get.width < MEDIUM_SCREEN_SIZE;
+  static bool isSmallScreen({width}) {
+    return width < MEDIUM_SCREEN_SIZE;
   }
 
-  static bool isMediumScreen() =>
-      Get.width >= MEDIUM_SCREEN_SIZE && Get.width < LARGE_SCREEN_SIZE;
+  static bool isMediumScreen({width}) =>
+      width >= MEDIUM_SCREEN_SIZE && width < LARGE_SCREEN_SIZE;
 
-  static bool isLargeScreen() => Get.width >= LARGE_SCREEN_SIZE;
-  static bool isCustomScreen() =>
-      Get.width >= MEDIUM_SCREEN_SIZE && Get.width <= CUSTOM_SCREEN_SIZE;
+  static bool isLargeScreen({width}) => width >= LARGE_SCREEN_SIZE;
+  static bool isCustomScreen({width}) =>
+      width >= MEDIUM_SCREEN_SIZE && width <= CUSTOM_SCREEN_SIZE;
 }

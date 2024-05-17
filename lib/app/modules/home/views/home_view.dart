@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:maya_maya_architecture/app/modules/home/views/web_views/web_home_view.dart';
 import 'package:maya_maya_architecture/base/responsive_views/base_responsive_view.dart';
 
-
 import '../controllers/home_controller.dart';
 import 'mobile_views/mobile_home_view.dart';
 
@@ -18,7 +17,9 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: Colors.white,
       ),
       body: BaseResponsiveView(
-          largeScreen: WebHomeView(), smallScreen: const MobileHomeView()),
+          width: Get.width,
+          largeScreen: WebHomeView(),
+          smallScreen: const MobileHomeView()),
     );
   }
 }

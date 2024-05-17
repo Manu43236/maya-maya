@@ -1,50 +1,24 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SigninController extends GetxController
-    with GetSingleTickerProviderStateMixin {
-  final signInFormKey = GlobalKey<FormState>();
+class SigninController extends GetxController {
+  //TODO: Implement SigninController
 
-  late TabController tabController;
-  late TextEditingController emailController;
-
-  late TextEditingController usernameController;
-  late TextEditingController passwordController;
-
-  FocusNode usernameFN = FocusNode();
-  FocusNode passwordFN = FocusNode();
-
-  bool showPassword = false;
-
+  final count = 0.obs;
+  var showLoginForm = false.obs;
   @override
   void onInit() {
     super.onInit();
-    tabController = TabController(vsync: this, length: 3);
-    emailController = TextEditingController();
-    usernameController = TextEditingController(text: "infopitroda@gmail.com");
-    passwordController = TextEditingController(text: "Perfect1@");
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
   }
 
   @override
   void onClose() {
-    usernameController.dispose();
-    passwordController.dispose();
-    emailController.dispose();
-    tabController.dispose();
-
     super.onClose();
   }
 
-  changeTab(int tab) {
-    tabController.animateTo(
-      tab,
-      duration: const Duration(
-        milliseconds: 1500,
-      ),
-    );
-  }
-
-  showPasswordValue() {
-    showPassword = !showPassword;
-  }
+  void increment() => count.value++;
 }

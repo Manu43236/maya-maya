@@ -6,7 +6,7 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.offAndToNamed(Routes.SIGNUP);
+      Get.offAndToNamed(Routes.SIGNIN);
     });
     super.onInit();
   }
