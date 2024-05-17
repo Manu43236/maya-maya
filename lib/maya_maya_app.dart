@@ -27,6 +27,12 @@ class _AppState extends State<MayaMayaApp> {
       title: Env().title,
       debugShowCheckedModeBanner: false,
       initialRoute: AppPages.INITIAL,
+      theme: ThemeData(
+        useMaterial3: true,
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Colors.white,
+        ),
+      ),
       getPages: AppPages.routes,
       unknownRoute: GetPage(
         name: '/notFound',

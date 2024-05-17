@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SigninController extends GetxController {
@@ -5,8 +6,12 @@ class SigninController extends GetxController {
 
   final count = 0.obs;
   var showLoginForm = false.obs;
+  var showForgotPasswordForm = false.obs;
+  
+  final signInFormKey = GlobalKey<FormState>();
   @override
   void onInit() {
+    
     super.onInit();
   }
 

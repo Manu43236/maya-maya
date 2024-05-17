@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:maya_maya_architecture/app/modules/signin/views/web/web_signin_view.dart';
 import 'package:maya_maya_architecture/app/modules/signup/views/web/web_signup_view.dart';
 
 import '../controllers/signup_controller.dart';
